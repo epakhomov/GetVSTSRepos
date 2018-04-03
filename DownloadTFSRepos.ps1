@@ -32,7 +32,6 @@ $Headers = @{
  $jsonObj.value | foreach {$json=$_; $url += @($domain + $json.id + $api + $json.name + $version)}
  
  
- 
  ForEach ($item in $url) {
     
  
