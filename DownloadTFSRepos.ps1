@@ -13,7 +13,7 @@ $personalAccessToken = ""
 $api = "/_api/_versioncontrol/itemContentZipped?repositoryId=&path=$/"
 $version = "&version=T&__v=5"
 $url = @()
-$OutPath = "/path/to/save/files/" #don't forget to use the slahs at the end
+$OutPath = "/path/to/save/files/" #don't forget to use the slash at the end
 $webclient = New-Object System.Net.WebClient
  
 $basic = [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes(":$($personalAccessToken)"));
