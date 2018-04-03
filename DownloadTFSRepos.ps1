@@ -17,7 +17,6 @@ $OutPath = "/path/to/save/files/" #don't forget to use the slash at the end
 $webclient = New-Object System.Net.WebClient
  
 $basic = [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes(":$($personalAccessToken)"));
- 
 $basicAuthValue = "Basic $basic" 
 
 $Headers = @{
@@ -34,7 +33,6 @@ $Headers = @{
  
  ForEach ($item in $url) {
     
- 
  $file = $OutPath +  ($item).split('/')[-5] + ".zip"
  
  $webclient.DownloadFile($item, $file)
