@@ -36,5 +36,6 @@ $Headers = @{
  $file = $OutPath +  ($item).split('/')[-5] + ".zip"
  
  $webclient.DownloadFile($item, $file)
+ Write-Host $file
  
  }
